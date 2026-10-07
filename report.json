@@ -1,0 +1,49 @@
+{
+  "source": "Chen, D. (2015). Online Retail. UCI. https://doi.org/10.24432/C5BW33",
+  "source_download": "https://archive.ics.uci.edu/static/public/352/online%2Bretail.zip",
+  "source_sha256": "43465a06f2ccf7c8b5bd2892bc7defb52f97487934fe93b16ae4c3936424676d",
+  "dataset_start": "2010-12-01T08:26:00",
+  "dataset_end": "2011-12-09T12:50:00",
+  "quality": {
+    "source_rows": 541909,
+    "positive_sales_rows": 530104,
+    "excluded_rows": 11805,
+    "cancellation_rows": 9288,
+    "nonpositive_quantity_rows": 10624,
+    "nonpositive_price_rows": 2517,
+    "missing_customer_rows": 135080,
+    "exact_duplicate_rows_flagged_not_removed": 5268
+  },
+  "kpis": {
+    "sales_gbp": 10666684.54,
+    "orders": 19960.0,
+    "identified_customers": 4338.0,
+    "average_order_value": 534.4
+  },
+  "peak_complete_month": {
+    "month": "2011-11",
+    "sales_gbp": 1509496.33,
+    "orders": 2769
+  },
+  "uk_positive_sales_share_pct": 84.61131522316494,
+  "identified_customer_summary": {
+    "identified_customers": 4338.0,
+    "repeat_customers": 2845.0,
+    "repeat_customer_pct": 65.58
+  },
+  "definitions": {
+    "sales_gbp": "Sum(Quantity \u00d7 UnitPrice) on noncancelled lines with positive quantity and price. Not net revenue or profit.",
+    "orders": "Distinct InvoiceNo in positive sales population, including unidentified customers.",
+    "average_order_value": "Positive sales value / distinct orders.",
+    "repeat_customer_pct": "Identified customers with more than one distinct purchase invoice / all identified purchasing customers."
+  },
+  "caveats": [
+    "Historical portfolio study, not current business performance.",
+    "December 2011 is partial; do not compare it directly with complete months.",
+    "Negative quantities, cancellations and nonpositive prices are excluded; returns are not subtracted.",
+    "Anonymous sales count in totals; customer analysis excludes missing CustomerID.",
+    "Exact duplicate-looking lines are flagged and retained because line identifiers are unavailable.",
+    "Shipping, charges and adjustment StockCodes are retained when positive; totals are not merchandise-only.",
+    "No observed trend is treated as a causal explanation or achieved business improvement."
+  ]
+}
